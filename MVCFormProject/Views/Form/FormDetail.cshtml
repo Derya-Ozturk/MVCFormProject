@@ -1,0 +1,39 @@
+﻿@model FooVM
+@{
+    Layout = "_Layout";
+}
+
+<h5>Form Detail - Id: @Model.FormModel?.Id</h5>
+<br />
+<form id="createForm">
+    <div class="form-group">
+        <label for="formName">Name:</label>
+        <input type="text" class="form-control" id="formName" name="Name" value="@Model.FormModel?.Name">
+    </div>
+    <br />
+    <div class="form-group">
+        <label for="formDescription">Description:</label>
+        <input type="text" class="form-control" id="formDescription" name="Description" value="@Model.FormModel?.Description">
+    </div>
+    <br />
+    <div class="form-group">
+        <label for="formCreatedBy">Created At:</label>
+        <input type="text" class="form-control" id="formCreatedAt" name="CreatedAt" value="@Model.FormModel?.CreatedAt">
+    </div>
+    <br />
+    <div class="form-group">
+        <label for="formCreatedBy">Created At:</label>
+        <input type="text" class="form-control" id="formCreatedAt" name="CreatedAt" value="@Model.FormModel.CreatedByNavigation.Username">
+    </div>
+    <br />
+    @foreach (var field in Model.FormModel.Fields)
+    {
+        <div class="form-group">
+            <label>Fields:</label>
+            <input type="text" class="form-control" id="formCreatedBy" name="CreatedBy" value="@field.Name">
+            <br />
+        </div>      
+    }
+
+
+</form>

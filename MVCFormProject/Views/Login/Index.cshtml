@@ -1,0 +1,31 @@
+﻿@model UserModel
+@{
+    Layout = "_LoginLayout";
+}
+
+
+<div class="container center-container">
+    <form method="post">
+        <div class="container center-container">
+            <div class="login-form">
+                <h4 class="text-center">Login Page</h4>
+                <br />
+                <div class="form-group">
+                    <label>User Name:</label>
+                    <input asp-for="Username" type="text" class="form-control" placeholder="Please enter your username" />
+                </div>
+                <br />
+
+                <div class="form-group">
+                    <label>Password:</label>
+                    <input asp-for="Password" type="password" class="form-control" placeholder="Please enter your password" />
+                </div>
+                <br />
+                <br />
+                <div class="form-group btn-center">
+                    <button class="btn btn-primary w-100 text-center" type="submit">Login</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
