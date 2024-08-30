@@ -31,7 +31,7 @@ namespace MVCFormProject.Controllers
         [HttpPost]
         public async Task<IActionResult> Index(UserModel userDto)
         {
-
+            var deneme = "";
             var auth = await _loginService.Authenticate(userDto.Username, userDto.Password);
 
             var authDto = new UserModel
